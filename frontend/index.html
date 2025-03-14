@@ -294,7 +294,61 @@
   </footer>
 
 
-  <script src="script.js"></script>
+  <!--<script src="script.js"></script>-->
+  <script>
+    const backendUrl = "https://url-shortener-theta-brown.vercel.app";
+
+    function pasteLink() {
+      navigator.clipboard.readText()
+        .then(text => document.getElementById("urlInput").value = text)
+        .catch(err => console.error("Clipboard read failed:", err));
+    }
+
+    async function shortenUrl() {
+      let longUrl = document.getElementById("urlInput").value.trim();
+      if (!longUrl) return alert("❌ Please enter a valid URL.");
+
+      try {
+        let response = await fetch(`${backendUrl}/shorten`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: longUrl })
+        });
+
+        let data = await response.json();
+        if (data.short) {
+          let shortUrl = `${backendUrl}/${data.short}`;
+          document.getElementById("shortUrlLink").href = shortUrl;
+          document.getElementById("shortUrlLink").textContent = shortUrl;
+          document.getElementById("result").style.display = "block";
+          document.getElementById("successMessage").style.display = "block";
+        } else {
+          alert("⚠️ Error: " + (data.error || "Could not shorten URL"));
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("❌ Failed to shorten URL. Please try again.");
+      }
+    }
+
+    function copyShortUrl() {
+      let shortUrl = document.getElementById("shortUrlLink").href;
+      navigator.clipboard.writeText(shortUrl)
+        .then(() => alert("✅ Copied to clipboard!"))
+        .catch(err => console.error("Clipboard copy failed:", err));
+    }
+
+    function submitTestimonial() {
+      let name = document.getElementById("name").value.trim();
+      let message = document.getElementById("message").value.trim();
+      if (name === "" || message === "") return alert("⚠️ Please enter both your name and feedback.");
+
+      alert(`✅ Thank you for your feedback, ${name}!`);
+      document.getElementById("name").value = "";
+      document.getElementById("message").value = "";
+    }
+  </script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
