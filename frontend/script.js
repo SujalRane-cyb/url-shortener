@@ -1,4 +1,4 @@
-const backendUrl = "https://url-shortener-theta-brown.vercel.app/";  // ✅ Replace with your actual Vercel backend URL
+const backendUrl = "https://url-shortener-theta-brown.vercel.app";  // ✅ Replace with your actual Vercel backend URL
 
 // Function to paste a URL from clipboard
 function pasteLink() {
@@ -7,16 +7,16 @@ function pasteLink() {
             document.getElementById("urlInput").value = text;
         })
         .catch(err => {
-            console.error("Clipboard read failed: ", err);
+            console.error("Clipboard read failed:", err);
         });
 }
 
 // Function to shorten the URL
 async function shortenUrl() {
-    let longUrl = document.getElementById("urlInput").value;
+    let longUrl = document.getElementById("urlInput").value.trim();
     
     if (!longUrl) {
-        alert("Please enter a valid URL.");
+        alert("❌ Please enter a valid URL.");
         return;
     }
 
@@ -34,13 +34,13 @@ async function shortenUrl() {
             document.getElementById("shortUrlLink").href = shortUrl;
             document.getElementById("shortUrlLink").textContent = shortUrl;
             document.getElementById("result").style.display = "block";
-            document.getElementById("successMessage").style.display = "block"; // ✅ Show success message
+            document.getElementById("successMessage").style.display = "block";  // ✅ Show success message
         } else {
-            alert("Error: " + (data.error || "Could not shorten URL"));
+            alert("⚠️ Error: " + (data.error || "Could not shorten URL"));
         }
     } catch (error) {
         console.error("Error:", error);
-        alert("Failed to shorten URL.");
+        alert("❌ Failed to shorten URL. Please try again.");
     }
 }
 
@@ -50,24 +50,24 @@ function copyShortUrl() {
     
     navigator.clipboard.writeText(shortUrl)
         .then(() => {
-            alert("Copied to clipboard!");
+            alert("✅ Copied to clipboard!");
         })
         .catch(err => {
-            console.error("Clipboard copy failed: ", err);
+            console.error("Clipboard copy failed:", err);
         });
 }
 
 // Function to handle testimonial submission
 function submitTestimonial() {
-    let name = document.getElementById("name").value;
-    let message = document.getElementById("message").value;
+    let name = document.getElementById("name").value.trim();
+    let message = document.getElementById("message").value.trim();
 
-    if (name.trim() === "" || message.trim() === "") {
-        alert("Please enter both your name and feedback.");
+    if (name === "" || message === "") {
+        alert("⚠️ Please enter both your name and feedback.");
         return;
     }
 
-    alert("Thank you for your feedback, " + name + "!");
+    alert(`✅ Thank you for your feedback, ${name}!`);
     document.getElementById("name").value = "";
     document.getElementById("message").value = "";
 }
