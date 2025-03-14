@@ -7,13 +7,7 @@
     }
   ],
   "routes": [
-    {
-      "src": "/shorten",
-      "dest": "backend/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "backend/server.js"
-    }
+    { "src": "/shorten", "dest": "backend/server.js" },
+    { "src": "/(.*)", "dest": "backend/server.js" }
   ]
 }
