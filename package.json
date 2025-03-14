@@ -1,18 +1,16 @@
 {
   "name": "url-shortener",
   "version": "1.0.0",
-  "description": "A simple URL shortener using Node.js, Express, and MongoDB",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node server.js",
+    "vercel-build": "npm install"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^7.0.0",
-    "cors": "^2.8.5"
-  },
-  "engines": {
-     "node": "22.x"
+    "mongoose": "^6.3.3",
+    "shortid": "^2.2.16"
   }
 }
-
