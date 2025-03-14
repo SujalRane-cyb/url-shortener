@@ -1,0 +1,472 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Stylish Navbar Brand */
+.navbar-brand {
+font-family: "Pacifico", cursive;
+    font-size: 1.7rem;
+   
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Custom Button Styling */
+ .shorten-btn {
+     background-color: black;
+     color: white;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 8px;
+     transition: 0.3s ease-in-out;
+ }
+
+ .shorten-btn:hover {
+     background-color: #333;
+ }
+
+ /* Input Field Styling */
+ .shorten-input {
+     border-radius: 8px;
+     padding: 10px;
+     width: 100%;
+ }
+
+
+ /* Paste Icon Button */
+ .paste-btn {
+     background-color: transparent;
+     border: none;
+     color: #333;
+     cursor: pointer;
+     font-size: 1.2rem;
+ }
+
+ .paste-btn:hover {
+     color: black;
+ }
+
+
+         /* Hero Section */
+         .hero {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             min-height: 65vh;
+             text-align: center;
+             padding: 40px 0;
+         }
+    
+         .hero h1 {
+             font-size: 2.8rem;
+             font-weight: bold;
+             color: #222;
+         }
+    
+         .hero p {
+             font-size: 1.1rem;
+             color: #555;
+             max-width: 500px;
+             opacity: 0.8;
+         }
+    
+         .shorten-box {
+             width: 100%;
+             max-width: 550px;
+             background: white;
+             padding: 15px;
+             border-radius: 12px;
+             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+         }
+    
+         /* About Us Section */
+         .profile-img {
+             width: 100px;
+             height: 100px;
+             object-fit: cover;
+             border-radius: 50%;
+             margin-bottom: 10px;
+         }
+
+
+         /* updated */ 
+         
+
+                 /* Shortened Link Output */
+                 #result {
+                     display: none;
+                     text-align: center;
+                     background: #f8f9fa;
+                     padding: 12px;
+                     border-radius: 10px;
+                     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                     max-width: 500px;
+                     margin: 20px auto;
+                 }
+        
+                 /* Shortened Link Styling */
+                 #shortUrlLink {
+                     font-size: 1.2rem;
+                     font-weight: bold;
+                     color: #007bff;
+                     text-decoration: none;
+                     display: inline-block;
+                     padding: 8px 0;
+                     transition: 0.3s ease-in-out;
+                 }
+        
+                 #shortUrlLink:hover {
+                     color: #0056b3;
+                     text-decoration: underline;
+                 }
+        
+                 /* Copy Button (Black) */
+                 .copy-btn {
+                     background: black;
+                     color: white;
+                     border: none;
+                     padding: 8px 12px;
+                     border-radius: 8px;
+                     cursor: pointer;
+                     transition: 0.3s ease-in-out;
+                     margin-left: 10px;
+                     /* Adds spacing from the link */
+                 }
+        
+                 .copy-btn:hover {
+                     background: #333;
+                 }
+        
+                 /* Paste Icon Button */
+                 .paste-btn {
+                     background: #e9ecef;
+                     border: 1px solid #ced4da;
+                     padding: 8px 12px;
+                     border-radius: 8px;
+                     cursor: pointer;
+                     transition: 0.3s ease-in-out;
+                 }
+        
+                 .paste-btn:hover {
+                     background: #d6d8db;
+                 }
+        
+                 /* Success Label */
+                 .success-label {
+                     display: none;
+                     color: green;
+                     font-weight: bold;
+                     margin-top: 10px;
+                 }
+        
+                 /* Hero Section */
+                 .hero {
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+                     min-height: 65vh;
+                     text-align: center;
+                     padding: 40px 0;
+                 }
+        
+                 .hero h1 {
+                     font-size: 2.8rem;
+                     font-weight: bold;
+                     color: #222;
+                 }
+        
+                 .hero p {
+                     font-size: 1.1rem;
+                     color: #555;
+                     max-width: 500px;
+                     opacity: 0.8;
+                 }
+        
+                 .shorten-box {
+                     width: 100%;
+                     max-width: 550px;
+                     background: white;
+                     padding: 15px;
+                     border-radius: 12px;
+                     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+                 }
+
+   
+   /* Navbar Hover Effect */
+   .navbar-nav .nav-link {
+       position: relative;
+       font-weight: 500;
+       transition: color 0.3s ease-in-out;
+   }
+
+   .navbar-nav .nav-link:hover {
+       color: #007bff;
+   }
+
+   /* Button Hover Effect */
+   .shorten-btn,
+   .copy-btn,
+   .paste-btn {
+       transition: 0.3s ease-in-out;
+   }
+
+   .shorten-btn:hover,
+   .copy-btn:hover,
+   .paste-btn:hover {
+       background-color: #0056b3;
+       color: white;
+   }
+
+   /* Footer */
+   .footer {
+       background: #222;
+       color: white;
+       text-align: center;
+       padding: 15px;
+       font-size: 0.9rem;
+   }
+
+
+   /* Meet Our Team Section */
+   .team-member {
+       background: white;
+       padding: 20px;
+       border-radius: 12px;
+       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
+
+   .team-member img {
+       width: 100px;
+       height: 100px;
+       border-radius: 50%;
+       object-fit: cover;
+       transition: transform 0.3s ease-in-out;
+   }
+
+   .team-member:hover {
+       transform: translateY(-5px);
+       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+   }
+
+   .team-member:hover img {
+       transform: scale(1.1);
+   }
+
+   .team-member h5 {
+       margin-top: 10px;
+       font-size: 1.2rem;
+       font-weight: bold;
+       transition: color 0.3s ease-in-out;
+   }
+
+   .team-member p {
+       font-size: 0.9rem;
+       color: #777;
+   }
+
+   .team-member:hover h5 {
+       color: #007bff;
+   }
+
+
+   /* Features Section */
+   .features-card {
+       background: white;
+       padding: 30px;
+       border-radius: 15px;
+       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+       text-align: center;
+       height: 100%;
+       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
+
+   .features-card i {
+       font-size: 2.5rem;
+       margin-bottom: 15px;
+       transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+   }
+
+   .features-card h5 {
+       font-size: 1.3rem;
+       font-weight: bold;
+       margin-bottom: 10px;
+       transition: color 0.3s ease-in-out;
+   }
+
+   .features-card p {
+       font-size: 1rem;
+       color: #555;
+   }
+
+   /* Hover Effects */
+   .features-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+   }
+
+   .features-card:hover i {
+       transform: scale(1.2);
+       color: #007bff;
+   }
+
+   .features-card:hover h5 {
+       color: #007bff;
+   }
+
+   .features-card h5{
+    padding-top:1rem;
+   }
+
+
+
+/* FAQ Section */
+.accordion-button {
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.accordion-button:hover {
+    background: #f8f9fa;
+}
+
+.accordion-body {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Testimonials Section */
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    flex: 1;
+    max-width: 480px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #007bff;
+}
+
+/* Testimonial Form */
+.testimonial-form {
+    flex: 1;
+    max-width: 480px;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.testimonial-form h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.testimonial-form input,
+.testimonial-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.testimonial-form input:focus,
+.testimonial-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.4);
+}
+
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%);
+}
+
+/* Dark Button with Blue Hover Effect */
+.testimonial-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.testimonial-form button:hover {
+    background: #007bff;
+    /* Blue hover effect */
+    color: white;
+}
+/* Hide Carousel Arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+
+/* Feedback Button */
+.feedback-btn {
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.feedback-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.icon-link {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0 8px;
+    transition: color 0.3s ease-in-out;
+}
+
+.icon-link:hover {
+    color: #007bff;
+}
